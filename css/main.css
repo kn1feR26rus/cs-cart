@@ -11,6 +11,7 @@
 body {
     background-color: aliceblue;
     font-family: 'Open Sans', sans-serif;
+    scrollbar-gutter: stable;
 }
 
 .overflow {
