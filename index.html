@@ -1,23 +1,97 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css" />
     <title>CS-CART</title>
-</head>
-<body>
-    
+  </head>
+  <body>
     <section class="payment">
-        <div class="payment__container">
-            <h1 class="payment__title">Checkout</h1>
-            <div class="payment__products">
-                <h2 class="payment__subtitle">Products</h2>
+      <div class="payment__container">
+        <h1 class="payment__title">Checkout</h1>
+        <div class="payment__products">
+          <span class="payment__subtitle">Products</span>
+          <div class="payment__products-box">
+            <div class="payment__products-item">
+              <a href="/" class="payment__products-name"
+                >Apple - Ipad width Retina display Wi-Fi 32GB - White</a
+              >
+              <span class="payment__products-price">$499.00</span>
             </div>
+            <div class="payment__products-item">
+              <a href="/" class="payment__products-name"
+                >16Gb A Series WalkMan Video MP3</a
+              >
+              <span class="payment__products-price">$130.00</span>
+            </div>
+          </div>
         </div>
+        <div class="payment__delivery">
+          <span class="payment__subtitle">Shipping method</span>
+          <div class="payment__delivery-item">
+            <span class="payment__delivery-name">FedEx</span>
+            <span class="payment__delivery-price">$13.99</span>
+          </div>
+        </div>
+        <div class="payment__controls">
+          <span class="payment__subtitle">Payment method</span>
+          <div class="payment__controls-box">
+            <a href="javascript:void(0);" id="credit-btn" class="payment__btn active"
+              >Credit card</a
+            >
+            <a href="javascript:void(0);" id="gift-btn" class="payment__btn">Gift card</a>
+            <a href="javascript:void(0);" id="paypal-btn" class="payment__btn">PayPal</a>
+          </div>
+        </div>
+        
+        <form action="" method="" class="payment__form">
+          <div class="payment__form-container">
+            <div class="payment__form-box">
+              <fieldset class="payment__form-card">
+                <label for="form-card">Card number<small class="payment__form-require">*</small> </label>
+                <div class="payment__card-container">
+                  <input type="text" maxlength="20" class="payment__card-field input-number" id="form-card" required autocomplete="off"">
+                </div>
+              </fieldset>
+  
+              <fieldset class="payment__form-date">
+                <label for="form-date__mm">Date (mm/yy)<small class="payment__form-require">*</small> </label>
+                <div class="payment__date-container">
+                  <input type="num" maxlength="2" class="payment__date-field input-number" id="form-date__mm" required autocomplete="off"">
+                  <input type="num" maxlength="2" class="payment__date-field input-number" id="form-date__yy" required autocomplete="off"">
+                </div>
+              </fieldset>
+              
+              <fieldset class="payment__form-holder">
+                <label for="form-cardholder">Cardholder's name<small class="payment__form-require">*</small> </label>
+                <div class="payment__holder-container">
+                  <input type="text" maxlength="30" class="payment__holder-field" id="form-cardholder" required autocomplete="off"">
+                </div>
+              </fieldset>
+            </div>
+            <fieldset class="payment__form-cvv">
+              <label for="form-cvv">CVV/CVC<small class="payment__form-require">*</small> </label>
+              <div class="payment__cvv-container">
+                <input type="num" maxlength="3" class="payment__cvv-field input-number" id="form-cvv" required autocomplete="off"">
+                <img src="/assets/images/question.png" alt="payment__cvv-question" class="payment__cvv-question">
+                <div class="payment__tooltip">
+                  <img src="/assets/images/cvv.png" alt="payment__tooltip-img" class="payment__tooltip-img">
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="payment__terms">
+            <input type="checkbox" id="terms" class="payment__terms-checkbox">
+            <label for="terms">I accept the <a href="javascript:void(0);" class="payment__terms-btn">Terms and Conditions</a> </label>
+          </div>
+          <input type="submit" class="payment__form-submit" value="Place order ( $624.99 )">
+        </form>
+      </div>
     </section>
 
     <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.maskedinput.min.js"></script>
     <script src="/js/main.js"></script>
-</body>
+  </body>
 </html>
