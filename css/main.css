@@ -359,6 +359,12 @@ body {
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    transition: all .9s;
+}
+.payment__form-submit:hover {
+    border: 1px solid orangered;
+    background-color: #fff;
+    color: orangered;
 }
 
 @media screen and (max-width: 768px) {
